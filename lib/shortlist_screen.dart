@@ -43,7 +43,7 @@ class _ShortlistScreenState extends State<ShortlistScreen> {
             children: [
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 50,
+                height: MediaQuery.of(context).size.height * 0.056,
                 color: Colors.blueGrey[900],
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,

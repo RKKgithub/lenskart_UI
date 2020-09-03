@@ -41,6 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    print(MediaQuery.of(context).size.height);
     List<Widget> topHorizontalContent = [
       SizedBox(
         width: 7,
@@ -482,12 +483,12 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text('Agent Screen Share'),
       ),
       Container(
-        height: 50,
+        height: MediaQuery.of(context).size.height * 0.056,
         color: Colors.grey[200],
       ),
       Container(
         color: Colors.grey[300],
-        height: 30,
+        height: MediaQuery.of(context).size.height * 0.034,
         child: Row(
           children: [
             Spacer(),
@@ -659,12 +660,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Container(
                       width: MediaQuery.of(context).size.width,
-                      height: 50,
+                      height: MediaQuery.of(context).size.height * 0.056,
                       color: Colors.blueGrey[900],
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width,
-                      height: 70,
+                      height: MediaQuery.of(context).size.height * 0.079,
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: topHorizontalContent,
@@ -674,12 +675,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 250,
+                  height: MediaQuery.of(context).size.height * 0.281,
                   child: Stack(
                     children: [
                       Container(
                         width: MediaQuery.of(context).size.width,
-                        height: 250,
+                        height: MediaQuery.of(context).size.height * 0.281,
                         child: Expanded(
                           child: PageView(
                             onPageChanged: (int page) {
@@ -713,7 +714,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: Container(
                     width: (MediaQuery.of(context).size.width) * (20 / 21),
-                    height: 300,
+                    height: MediaQuery.of(context).size.height * 0.337,
                     child: Card(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
@@ -872,7 +873,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: Container(
                     width: (MediaQuery.of(context).size.width) * (20 / 21),
-                    height: 120,
+                    height: MediaQuery.of(context).size.height * 0.135,
                     child: Card(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
@@ -889,7 +890,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 240,
+                  height: MediaQuery.of(context).size.height * 0.27,
                   child: Stack(
                     children: [
                       Expanded(
@@ -924,7 +925,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: Container(
                     width: (MediaQuery.of(context).size.width) * (20 / 21),
-                    height: 130,
+                    height: MediaQuery.of(context).size.height * 0.146,
                     child: Card(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
@@ -952,7 +953,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       Container(
                         width: (MediaQuery.of(context).size.width) * (0.464),
-                        height: 240,
+                        height: MediaQuery.of(context).size.height * 0.27,
                         child: Card(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
@@ -968,7 +969,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       Container(
                         width: (MediaQuery.of(context).size.width) * (0.464),
-                        height: 240,
+                        height: MediaQuery.of(context).size.height * 0.27,
                         child: Card(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
@@ -989,7 +990,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: Container(
                     width: (MediaQuery.of(context).size.width) * (20 / 21),
-                    height: 120,
+                    height: MediaQuery.of(context).size.height * 0.135,
                     child: Card(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
@@ -1008,7 +1009,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: Container(
                     width: (MediaQuery.of(context).size.width) * (20 / 21),
-                    height: 120,
+                    height: MediaQuery.of(context).size.height * 0.135,
                     child: Card(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
@@ -1027,7 +1028,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: Container(
                     width: (MediaQuery.of(context).size.width) * (20 / 21),
-                    height: 120,
+                    height: MediaQuery.of(context).size.height * 0.135,
                     child: Card(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
@@ -1044,7 +1045,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Container(
                   color: Colors.blueGrey[900],
-                  height: 150,
+                  height: MediaQuery.of(context).size.height * 0.17,
                   width: MediaQuery.of(context).size.width,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,

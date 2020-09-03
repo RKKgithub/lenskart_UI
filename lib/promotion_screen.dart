@@ -12,6 +12,7 @@ class _PromotionScreenState extends State<PromotionScreen> {
 
   @override
   Widget build(BuildContext context) {
+    print(MediaQuery.of(context).size.height);
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -25,7 +26,7 @@ class _PromotionScreenState extends State<PromotionScreen> {
             children: [
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 50,
+                height: MediaQuery.of(context).size.height * 0.056,
                 color: Colors.blueGrey[900],
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
