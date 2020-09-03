@@ -59,12 +59,7 @@ class CartScreen extends StatelessWidget {
                     ),
                     color: Colors.cyan,
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => MyApp(),
-                        ),
-                      );
+                      Navigator.pop(context);
                     },
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 15),
