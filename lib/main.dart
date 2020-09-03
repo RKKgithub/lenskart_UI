@@ -41,7 +41,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.of(context).size.height);
     List<Widget> topHorizontalContent = [
       SizedBox(
         width: 7,
@@ -681,16 +680,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       Container(
                         width: MediaQuery.of(context).size.width,
                         height: MediaQuery.of(context).size.height * 0.281,
-                        child: Expanded(
-                          child: PageView(
-                            onPageChanged: (int page) {
-                              setState(() {
-                                firstCurrentPage = page;
-                              });
-                            },
-                            controller: firstController,
-                            children: firstCardSet,
-                          ),
+                        child: PageView(
+                          onPageChanged: (int page) {
+                            setState(() {
+                              firstCurrentPage = page;
+                            });
+                          },
+                          controller: firstController,
+                          children: firstCardSet,
                         ),
                       ),
                       Align(
@@ -893,16 +890,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: MediaQuery.of(context).size.height * 0.27,
                   child: Stack(
                     children: [
-                      Expanded(
-                        child: PageView(
-                          onPageChanged: (int page) {
-                            setState(() {
-                              thirdCurrentPage = page;
-                            });
-                          },
-                          controller: thirdController,
-                          children: secondCardSet,
-                        ),
+                      PageView(
+                        onPageChanged: (int page) {
+                          setState(() {
+                            thirdCurrentPage = page;
+                          });
+                        },
+                        controller: thirdController,
+                        children: secondCardSet,
                       ),
                       Align(
                         alignment: Alignment.bottomCenter,
